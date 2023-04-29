@@ -102,3 +102,7 @@ C:\Users\Charles M\Desktop\UC07_AT02\Biblioteca\UC07-AT01-Biblioteca\obj\Debug\n
 C:\Users\Charles M\Desktop\UC07_AT02\Biblioteca\UC07-AT01-Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.dll
 C:\Users\Charles M\Desktop\UC07_AT02\Biblioteca\UC07-AT01-Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.pdb
 C:\Users\Charles M\Desktop\UC07_AT02\Biblioteca\UC07-AT01-Biblioteca\obj\Debug\netcoreapp3.1\Biblioteca.genruntimeconfig.cache
+C:\Users\Charles M\Desktop\UC07_AT02\Biblioteca\UC07-AT01-Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Cadastro.cshtml.g.cs
+C:\Users\Charles M\Desktop\UC07_AT02\Biblioteca\UC07-AT01-Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Edicao.cshtml.g.cs
+C:\Users\Charles M\Desktop\UC07_AT02\Biblioteca\UC07-AT01-Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\_FormCadastro.cshtml.g.cs
+C:\Users\Charles M\Desktop\UC07_AT02\Biblioteca\UC07-AT01-Biblioteca\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Listagem.cshtml.g.cs
