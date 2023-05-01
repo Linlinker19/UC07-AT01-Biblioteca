@@ -27,6 +27,26 @@ namespace Biblioteca.Controllers
 
         public IActionResult Login()
         {
+            
+            //Teste Criptografia
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine(Criptografia.GerarMD5("123"));
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+
+
+
             return View();
         }
 
