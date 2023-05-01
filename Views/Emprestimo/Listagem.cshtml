@@ -1,7 +1,12 @@
 @model ICollection<Emprestimo>
 @{
     ViewData["Title"] = "Listagem de Empréstimos";
+    @* int FiltroPorPag = Int32.Parse(ViewData["livrosPorPagina"].ToString());
+    int PaginaAtual = Int32.Parse(ViewData["PaginaAtual"].ToString());
+    int NumLivrosPorPag = (Model.Count > FiltroPorPag ? Model.Count : FiltroPorPag);
+    int NumTotalDePag = Model.Count/NumLivrosPorPag + (Model.Count % NumLivrosPorPag==0 ? 0 : 1);  *@
 }
+
 
 <div class="row">
     <div class="col-md-12">
@@ -12,10 +17,32 @@
                 <option value="Livro">Livro</option>
             </select>
         </div>
+
         <div class="form-group mb-2 mx-sm-3">
             <input type="text" placeholder="Filtro" name="Filtro" class="form-control" />
         </div>
+
+        <div>
+            <select name=itensPorPagina id="itensPorPagina">
+                <option value="10"> 10  </option>
+                <option value="15"> 15  </option>
+                <option value="30"> 30  </option>
+                <option value="50"> 50  </option>
+                <option value=@Model.Count> Todos </option>
+            </select>
+        </div>
+
         <button type="submit" class="btn btn-primary mb-2">Pesquisar</button>
+
+         <div id="SeletorDePaginas">
+            <span> Página: </span>
+            @for (int i=1; i<=NumTotalDePag; i++)
+            {
+                <span><a href="/Emprestimo/Listagem?PaginaAtual=@i">@i,</a></span>
+            }
+
+        </div>
+
     </form>
     </div>
 </div>

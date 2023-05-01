@@ -40,7 +40,8 @@ namespace Biblioteca.Controllers
 
         public IActionResult Listagem(string tipoFiltro, string filtro)
         {
-            /* Autenticacao.CheckLogin(this); */
+            Autenticacao.CheckLogin(this);
+            Autenticacao.verificaSeUsuarioEAdmin(this);
             FiltrosUsuarios objFiltro = null;
             if(!string.IsNullOrEmpty(filtro))
             {
@@ -54,7 +55,8 @@ namespace Biblioteca.Controllers
 
         public IActionResult Edicao(int id)
         {
-            /* Autenticacao.CheckLogin(this); */
+            Autenticacao.CheckLogin(this); 
+            Autenticacao.verificaSeUsuarioEAdmin(this);
             UsuarioService us = new UsuarioService();
             Usuario u = us.ObterPorId(id);
             return View(u);
