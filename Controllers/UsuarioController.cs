@@ -61,5 +61,11 @@ namespace Biblioteca.Controllers
             Usuario u = us.ObterPorId(id);
             return View(u);
         }
+
+         public IActionResult NeedAdmin()
+        {
+            
+            return View();
+        }
     }
 }

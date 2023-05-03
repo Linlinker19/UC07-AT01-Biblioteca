@@ -1,10 +1,10 @@
 @model ICollection<Emprestimo>
 @{
     ViewData["Title"] = "Listagem de Empréstimos";
-    @* int FiltroPorPag = Int32.Parse(ViewData["livrosPorPagina"].ToString());
+    int FiltroPorPag = Int32.Parse(ViewData["emprestimosPorPagina"].ToString());
     int PaginaAtual = Int32.Parse(ViewData["PaginaAtual"].ToString());
-    int NumLivrosPorPag = (Model.Count > FiltroPorPag ? Model.Count : FiltroPorPag);
-    int NumTotalDePag = Model.Count/NumLivrosPorPag + (Model.Count % NumLivrosPorPag==0 ? 0 : 1);  *@
+    int NumEmprestimosPorPag = (Model.Count > FiltroPorPag ? Model.Count : FiltroPorPag);
+    int NumTotalDePag = Model.Count/NumEmprestimosPorPag + (Model.Count % NumEmprestimosPorPag==0 ? 0 : 1); 
 }
 
 
@@ -22,8 +22,8 @@
             <input type="text" placeholder="Filtro" name="Filtro" class="form-control" />
         </div>
 
-        <div>
-            <select name=itensPorPagina id="itensPorPagina">
+        <div class="form-group mb-2 mx-sm-3">
+            <select name=itensPorPagina id="itensPorPagina" class="form-control">
                 <option value="10"> 10  </option>
                 <option value="15"> 15  </option>
                 <option value="30"> 30  </option>
@@ -66,6 +66,7 @@
                 </thead>
                 <tbody>
                     @foreach(Emprestimo e in Model)
+                    @* @for(int i = (PaginaAtual-1)*NumLivrosPorPag; i< (NumLivrosPorPag * PaginaAtual < Model.Count?NumLivrosPorPag * PaginaAtual:Model.Count); i++) *@
                     {
                         @if(e.DataDevolucao < DateTime.Now && e.Devolvido == false) 
                         {
